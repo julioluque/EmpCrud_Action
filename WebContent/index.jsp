@@ -17,6 +17,10 @@
 
 <html:submit><bean:message key="submit" /></html:submit>
 
+<html:link action="locale.do?Language.es">Español</html:link>
+<html:link action="locale.do?Language.en">Ingles</html:link>
+
+
 
 </pre>
 

@@ -11,18 +11,12 @@
 
 	<!-- Form to validator -->
 	<action-mappings>
-		<action path="/reg" name="RF" validate="true" scope="session"
-			input="/index.jsp" />
+		<action path="/reg" name="RF" input="/index.jsp" type="controller.RegController">
+			<forward name="succes" path="/success.jsp"></forward>
+			<forward name="fail" path="/fail.jsp"></forward>
+		</action>
 	</action-mappings>
 
 	<message-resources parameter="resources/Messages"></message-resources>
-
-	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
-		<set-property property="pathnames"
-			value="/WEB-INF/validator-rules.xml,
-					/WEB-INF/EmpRegForm.xml" /> 
-	</plug-in>
-
-
 
 </struts-config>
