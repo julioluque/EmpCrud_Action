@@ -20,8 +20,8 @@ public class LangChangeController extends Action {
 
 		Locale locale = new Locale(lang);
 		
-		request.getSession().setAttribute("org.apache.struts.action.LOCALE", locale);
+		request.getSession().setAttribute( "org.apache.struts.action.LOCALE", locale);
 		
-		return mapping.findForward("samePage");
+		return mapping.findForward("samepage");
 	}
 }
